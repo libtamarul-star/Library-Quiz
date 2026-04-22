@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>図書館クイズラリー</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="page" id="page1">
+    <button class="start-button" onclick="goToPage(2)">解答を開始する</button>
+  </div>
+
+  <div class="page" id="page2">
+    <h1>クイズ1</h1>
+    <input type="text" id="answer1" placeholder="答えを入力">
+    <button onclick="checkAnswer(1)">送信</button>
+  </div>
+
+  <div class="page" id="page3">
+    <h1>クイズ2</h1>
+    <input type="text" id="answer2" placeholder="答えを入力">
+    <button onclick="checkAnswer(2)">送信</button>
+  </div>
+
+  <div class="page" id="page4">
+    <h1>クイズ3</h1>
+    <input type="text" id="answer3" placeholder="答えを入力">
+    <button onclick="checkAnswer(3)">送信</button>
+  </div>
+
+  <div class="page" id="page5">
+    <h2>全問正解！おめでとうございます！<br>図書館一階のRillport前にあるクイズラリー受付にお越しください。</h2>
+  </div>
+
+  <script>
+    const answers = ["1", "2", "3"];
+
+    function goToPage(n) {
+      document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+      document.getElementById('page' + n).style.display = 'flex';
+    }
+
+    function checkAnswer(n) {
+      const input = document.getElementById('answer' + n).value.trim();
+      if (input === answers[n - 1]) {
+        alert("正解！次へ行く→");
+        goToPage(n + 2);
+      } else {
+        alert("不正解です！やり直してください");
+      }
+    }
+
+    // 初期ページ表示
+    goToPage(1);
+  </script>
+
+</body>
+
+<footer>
+  &copy; 2025 立正大学品川図書館 All Rights Reserved.
+</footer>
+
+</html>
