@@ -1,5 +1,5 @@
 // 正解の設定（ここを書き換えるだけでクイズが作れます）
-const correctAnswers = ["9:00", "青", "100万"];
+const correctAnswers = ["2", "3", "4"];
 let currentStep = 1; // 現在のページ番号
 const totalSteps = 4; // クイズの総数（スタートページを除いた数）
 /**
