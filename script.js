@@ -1,5 +1,5 @@
-// 正解の設定（ここを書き換えるだけでクイズが作れます）
-const correctAnswers = ["2", "3", "4"];
+// ポスターの正解番号が、1問目から順に「3」「1」「4」だった場合
+const correctAnswers = ["3", "1", "4"];
 let currentStep = 1; // 現在のページ番号
 const totalSteps = 4; // クイズの総数（スタートページを除いた数）
 /**
