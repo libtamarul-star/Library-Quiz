@@ -96,3 +96,13 @@ footer {
  .page { padding: 30px 15px; }
  h1 { font-size: 1.2em; }
 }
+
+/* クイズポスター画像の設定 */
+.quiz-poster {
+ width: 100%;           /* 横幅を画面いっぱいに広げる */
+ max-width: 300px;      /* ただし、大きくなりすぎないように制限（お好みで調整） */
+ height: auto;          /* 縦横比を維持する */
+ border-radius: 8px;    /* 角を少し丸くする（おしゃれになります） */
+ margin: 10px 0 20px 0; /* 上下に隙間を作る */
+ box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 軽い影をつけて立体感を出す */
+}
