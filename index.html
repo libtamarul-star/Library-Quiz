@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>図書館クイズラリー | 立正大学品川図書館</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress-container" style="display: none;">
+<div id="progress-bar"></div>
+</div>
+<main>
+<div class="page active" id="page1">
+<div class="hero-image">📚</div>
+<h1>図書館クイズラリー</h1>
+<p>館内を巡ってクイズに挑戦しよう！</p>
+<button class="primary-button" onclick="nextPage()">解答を開始する</button>
+</div>
+<div class="page" id="page2">
+<span class="step-label">第1問</span>
+<h1>品川図書館の開館時間は？</h1>
+<p>（ヒント：入口の掲示板を見てみよう）</p>
+<input type="text" id="answer1" placeholder="答えを入力">
+<button class="check-button" onclick="checkAnswer(1)">回答を送る</button>
+</div>
+<div class="page" id="page3">
+<span class="step-label">第2問</span>
+<h1>Rillportにある椅子の色は？</h1>
+<input type="text" id="answer2" placeholder="答えを入力">
+<button class="check-button" onclick="checkAnswer(2)">回答を送る</button>
+</div>
+<div class="page" id="page4">
+<span class="step-label">第3問</span>
+<h1>この図書館の蔵書数は約何冊？</h1>
+<input type="text" id="answer3" placeholder="答えを入力">
+<button class="check-button" onclick="checkAnswer(3)">回答を送る</button>
+</div>
+<div class="page" id="page5">
+<div class="congrats-icon">🎉</div>
+<h2>全問正解！<br>おめでとうございます！</h2>
+<p class="instruction-text">
+       図書館一階のRillport前にある<br>
+<strong>クイズラリー受付</strong>にお越しください。
+</p>
+<button class="secondary-button" onclick="location.reload()">最初に戻る</button>
+</div>
+</main>
+<footer>
+&copy; 2025 立正大学品川図書館 All Rights Reserved.
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

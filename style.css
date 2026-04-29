@@ -1,0 +1,98 @@
+:root {
+ --primary-color: #0056b3; /* 立正大学のイメージに近い濃い青 */
+ --accent-color: #28a745;  /* 正解時の緑 */
+ --bg-color: #f8f9fa;
+ --text-color: #333;
+}
+body, html {
+ margin: 0;
+ padding: 0;
+ font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+ background-color: var(--bg-color);
+ color: var(--text-color);
+ height: 100%;
+ display: flex;
+ flex-direction: column;
+}
+main {
+ flex: 1;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 20px;
+}
+/* ページの切り替え設定 */
+.page {
+ display: none;
+ width: 100%;
+ max-width: 400px;
+ background: white;
+ padding: 40px 20px;
+ border-radius: 12px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ text-align: center;
+}
+.page.active {
+ display: flex;
+ flex-direction: column;
+ animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+ from { opacity: 0; transform: translateY(10px); }
+ to { opacity: 1; transform: translateY(0); }
+}
+/* プログレスバー */
+#progress-container {
+ width: 100%;
+ height: 8px;
+ background: #e0e0e0;
+ position: fixed;
+ top: 0;
+}
+#progress-bar {
+ height: 100%;
+ background: var(--primary-color);
+ width: 0%;
+ transition: width 0.3s ease;
+}
+/* テキスト装飾 */
+h1 { font-size: 1.4em; margin-bottom: 20px; }
+.step-label { color: var(--primary-color); font-weight: bold; font-size: 0.9em; margin-bottom: 5px; }
+/* 入力エリア */
+input[type="text"] {
+ padding: 15px;
+ font-size: 1.1em;
+ border: 2px solid #ddd;
+ border-radius: 8px;
+ margin-bottom: 20px;
+ outline: none;
+}
+input[type="text"]:focus {
+ border-color: var(--primary-color);
+}
+/* ボタン */
+button {
+ padding: 15px;
+ font-size: 1.1em;
+ font-weight: bold;
+ border: none;
+ border-radius: 8px;
+ cursor: pointer;
+ transition: background 0.2s;
+}
+.primary-button { background-color: var(--primary-color); color: white; }
+.check-button { background-color: var(--accent-color); color: white; }
+.secondary-button { background-color: #6c757d; color: white; margin-top: 20px; }
+/* フッター */
+footer {
+ background-color: #343a40;
+ color: #fff;
+ text-align: center;
+ padding: 15px;
+ font-size: 0.8em;
+}
+/* スマホ最適化 */
+@media (max-width: 480px) {
+ .page { padding: 30px 15px; }
+ h1 { font-size: 1.2em; }
+}
