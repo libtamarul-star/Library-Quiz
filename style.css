@@ -104,5 +104,7 @@ footer {
  height: auto;          /* 縦横比を維持する */
  border-radius: 8px;    /* 角を少し丸くする（おしゃれになります） */
  margin: 10px 0 20px 0; /* 上下に隙間を作る */
+ margin-right:　auto;   /* 右の余白を自動調整 */
+ margin-left:　auto;    /* 左の余白を自動調整 */
  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* 軽い影をつけて立体感を出す */
 }
