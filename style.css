@@ -110,3 +110,15 @@ footer {
  margin-bottom: 20px;     /* 下（入力欄との間）に隙間を作る */
  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+/* コイン画像の設定 */
+.coin {
+ display: block;          /* 画像を一つの「ブロック」として扱う */
+ margin-left: auto;       /* 左の余白を自動調整 */
+ margin-right: auto;      /* 右の余白を自動調整 */
+ width: 100%;             /* 横幅を画面いっぱいに広げる */
+ max-width: 300px;        /* 大きくなり過ぎないように注意 */
+ height: auto;            /* 縦横比を維持する */
+ margin-top: 10px;        /* 上に少し隙間を作る */
+ margin-bottom: 20px;     /* 下（入力欄との間）に隙間を作る */
+}
